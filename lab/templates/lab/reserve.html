@@ -1,0 +1,20 @@
+{% extends "lab/header.html" %}
+
+{% block content %}
+
+<!-- Prepares the calendar for display -->
+<script>
+    function setupCalendar() {
+        Calendar.setup(
+            dateField: 'embeddedDateField',
+            parentElement: 'calendar'
+        );
+    }
+
+    Event.observe(window, 'load', function() { setupCalendar() });
+</script>
+
+<div id="calendar">
+</div>
+
+{% endblock %}

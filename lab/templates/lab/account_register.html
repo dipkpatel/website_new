@@ -1,0 +1,50 @@
+{% extends "lab/header.html" %}
+
+{% block content %}
+
+<form method="POST">
+
+    <!-- Included to prevent a particular kind of website attack -->
+    {% csrf_token %}
+
+    <!-- Table of form inputs for registration -->
+    <table>
+        <tr>
+            <td>First Name</td>
+
+            <!-- This prints the <input> tag for the first name -->
+            <td>{{ form.first_name }}</td>
+
+            <!-- This prints problems that occurred while validating the first name. -->
+            <td>{{ form.first_name.errors }}</td>
+        </tr>
+
+        <tr>
+            <td>Last Name</td>
+
+            <!-- This prints the <input> tag for the last name. So on... -->
+            <td>{{ form.last_name }}</td>
+
+            <!-- This prints problems that occurred while validating the last name. So on... -->
+            <td>{{ form.last_name.errors }}</td>
+        </tr>
+
+        <tr>
+            <td>E-Mail</td>
+            <td>{{ form.email }}</td>
+            <td>{{ form.email.errors }}</td>
+        </tr>
+
+        <tr>
+            <td>Password</td>
+            <td>{{ form.password }}</td>
+            <td>{{ form.password.errors }}</td>
+        </tr>
+
+    </table>
+
+    <!-- Submit button, to send this information for registration -->
+    <input type="submit" value="Register" />
+</form>
+
+{% endblock %}
