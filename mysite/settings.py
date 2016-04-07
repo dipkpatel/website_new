@@ -37,7 +37,7 @@ TEMPLATE_LOADERS = (
 # Application definition
 
 INSTALLED_APPS = (
-    'lab','res',
+    'lab',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
