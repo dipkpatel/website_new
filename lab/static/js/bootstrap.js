@@ -8,6 +8,7 @@ if (typeof jQuery === 'undefined') {
   throw new Error('Bootstrap\'s JavaScript requires jQuery')
 }
 
+
 +function ($) {
   'use strict';
   var version = $.fn.jquery.split(' ')[0].split('.')
@@ -29,6 +30,13 @@ $('#sidebar').affix({
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
+$(document).ready(function () {
+        $('ul.nav > li').click(function (e) {
+            e.preventDefault();
+            $('ul.nav > li').removeClass('active');
+            $(this).addClass('active');                
+        });            
+    });
 
 +function ($) {
   'use strict';
