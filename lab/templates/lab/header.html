@@ -1,69 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Eco Living Lab</title>
+	<title>Yorkland Eco Learning Lab</title>
 	<link rel="shortcut icon" type="image/x-icon" href="/static/images/york_icon.ico" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	
 	<style>
 		.carousel-inner > .item > img,
 		.carousel-inner > .item > a > img {
-			width: 70%;
+			width: 80%;
 			margin: auto;
 		}
 	</style>
 
 	{% load staticfiles %}
-	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css'%}"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<style type="text/css">
-		html,body{
-			height: 100%
-		}
-	</style>
+
 </head>
 
-<body class="body">
-
-	<div class="header">
-		<center>
-			<h1>
-				Eco Living Lab
-			</h1>	
-		</center>
-
-		<br>
-		<br>
+<body class="body" style="background-color: #F3F3EB" data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+	
+	<div class="center-block">
+	
+		<img src="/static/images/banner.png" class="img-responsive" alt="Responsive image">	
+	
 	</div>
 
 	<div>
 		{% block content %}
 		{% endblock %}
 	</div>
-	<nav class="navbar navbar-inverse navbar-fixed-bottom">
-		<div class="container-fluid">
+	<div class="container-fluid">
+		<nav class="navbar navbar-inverse navbar-fixed-bottom">
+		
 			<div class="navbar-header">
-				<a class="navbar-brand" href="/">Eco Living Lab</a>
+				<a class="navbar-brand" href="/">Yorkland Eco Learning Lab</a>
 			</div>
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="/">Home</a></li>
 				<li><a href="/aboutus/">About Us</a></li>
-				<li><a href="/contactus/">Contact Us</a></li>
+				
 				<li><a href="/learn/">Learn</a></li>
+				
 				<li><a href="/live/">Live</a></li>
-				<li><a href="/reduce/">Reduce</a></li>
+				
+				<li><a href="/design/">Design</a></li>
+				
 				<li><a href="/play/">Play</a></li>
+				
 				<li><a href="/makeit/">Make it Happen</a></li>
-				<li><a href="/yorkland/">Yorkland Green Hub</a></li>
-				<li><a href="/reservations/calender/">Book</a></li>
+
+				<li><a href="/friends/">Friends</a></li>
+
+				<li><a href="/contactus/">Contact Us</a></li>				
 			</ul>
-		</div>
+	
 	</nav>
+	</div>	
+	
 
 	<footer>
 		<p>&copy; Website Sqaud, University of Guelph</p>
 	</footer>
+
+	
 </body>
 
 </html>

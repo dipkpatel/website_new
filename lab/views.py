@@ -20,13 +20,13 @@ def live(request):
 def play(request):
 	return render(request, 'lab/play.html')
 
-def reduce(request):
-	return render(request, 'lab/reduce.html')
+def design(request):
+	return render(request, 'lab/design.html')
 
 def makeit(request):
 	return render(request, 'lab/makeit.html')
 
-def yorkland(request):
-	return render(request, 'lab/yorkland.html')
+def friends(request):
+	return render(request, 'lab/friends.html')
 
 
