@@ -8,43 +8,47 @@
     {% csrf_token %}
 
     <!-- Table of form inputs for registration -->
-    <table>
+    <table style="width: 300px; margin: 0 auto;">
         <tr>
-            <td>First Name</td>
+            <td style="padding: 6px; text-align: right">First Name</td>
 
             <!-- This prints the <input> tag for the first name -->
-            <td>{{ form.first_name }}</td>
+            <td style="padding: 6px">{{ form.first_name }}</td>
 
             <!-- This prints problems that occurred while validating the first name. -->
-            <td>{{ form.first_name.errors }}</td>
+            <td style="padding: 6px">{{ form.first_name.errors }}</td>
         </tr>
 
         <tr>
-            <td>Last Name</td>
+            <td style="padding: 6px; text-align: right;">Last Name</td>
 
             <!-- This prints the <input> tag for the last name. So on... -->
-            <td>{{ form.last_name }}</td>
+            <td style="padding: 6px">{{ form.last_name }}</td>
 
             <!-- This prints problems that occurred while validating the last name. So on... -->
-            <td>{{ form.last_name.errors }}</td>
+            <td style="padding: 6px">{{ form.last_name.errors }}</td>
         </tr>
 
         <tr>
-            <td>E-Mail</td>
-            <td>{{ form.email }}</td>
-            <td>{{ form.email.errors }}</td>
+            <td style="padding: 6px; text-align: right;">E-Mail</td>
+            <td style="padding: 6px">{{ form.email }}</td>
+            <td style="padding: 6px">{{ form.email.errors }}</td>
         </tr>
 
         <tr>
-            <td>Password</td>
-            <td>{{ form.password }}</td>
-            <td>{{ form.password.errors }}</td>
+            <td style="padding: 6px; text-align: right;">Password</td>
+            <td style="padding: 6px">{{ form.password }}</td>
+            <td style="padding: 6px">{{ form.password.errors }}</td>
+        </tr>
+
+        <tr>
+            <td colspan="3" style="padding: 6px;" class="clearfix">
+                <!-- Submit button, to send this information for registration -->
+                <input class="btn btn-primary" style="margin: 0 auto; width: 100%;" type="submit" value="Register" />
+            </td>
         </tr>
 
     </table>
-
-    <!-- Submit button, to send this information for registration -->
-    <input type="submit" value="Register" />
 </form>
 
 {% endblock %}

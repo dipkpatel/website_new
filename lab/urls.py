@@ -11,7 +11,6 @@ urlpatterns = [
     url(r'^live/$', views.live, name='live'),
     url(r'^design/$', views.design, name='design'),
     url(r'^makeit/$', views.makeit, name='makeit'),
-    url(r'^yorkland/$', views.yorkland, name='yorkland'),
     url(r'^friends/$', views.friends, name='friends'),
 
     url(r'^reserve/?$', views.reserve, name='reserve'),
