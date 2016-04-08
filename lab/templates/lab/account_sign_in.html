@@ -6,13 +6,13 @@
 <form method="POST">
     {% csrf_token %}
 
-    <table>
+    <table style="margin: 0 auto; width: 250px;">
 
         <!-- Show a message if authentication failed -->
         {% if failed %}
 
             <tr>
-                <td colspan="3" style="color: #900">
+                <td style="padding: 6px" colspan="3" style="color: #900">
                     Incorrect username or password.
                 </td>
             </tr>
@@ -20,19 +20,24 @@
         {% endif %}
 
         <tr>
-            <td>E-Mail</td>
-            <td>{{ form.email }}</td>
-            <td>{{ form.email.errors }}</td>
+            <td style="padding: 6px">E-Mail</td>
+            <td style="padding: 6px">{{ form.email }}</td>
+            <td style="padding: 6px">{{ form.email.errors }}</td>
         </tr>
 
         <tr>
-            <td>Password</td>
-            <td>{{ form.password }}</td>
-            <td>{{ form.password.errors }}</td>
+            <td style="padding: 6px">Password</td>
+            <td style="padding: 6px">{{ form.password }}</td>
+            <td style="padding: 6px">{{ form.password.errors }}</td>
+        </tr>
+
+        <tr>
+            <td style="padding: 6px" colspan="3" class="clearfix">
+                <input class="btn btn-primary" style="float: right" type="submit" value="Sign In" />
+            </td>
         </tr>
     </table>
 
-    <input type="submit" value="Sign In" />
 </form>
 
 {% endblock %}

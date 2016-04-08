@@ -8,9 +8,14 @@ class Reservation(models.Model):
     A reservation created by a user.
     """
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
+    
 
-    start_date = models.DateField()
-    end_date = models.DateField()
+class ReservationDate(models.Model):
+    """
+    A date under reservation.
+    """
+    reservation = models.ForeignKey(Reservation, on_delete=models.CASCADE)
 
-    def __str__(self):
-        return str(self.account) + " " + str(start_date) + " " + str(end_date)
+    # This is better as a DateField, but having it as a CharField makes it
+    # ready to plug into the calendar.
+    date = models.CharField(max_length=16)

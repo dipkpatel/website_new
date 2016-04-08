@@ -16,6 +16,8 @@ div.calendar table
   background-color: #eee;
   border: 1px solid #aaa;
   border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 div.calendar thead {
@@ -48,6 +50,7 @@ div.calendar tr.days td {
   color: #555;
   text-align: center;
   cursor: pointer;
+  padding: 2em 6em;
 }
 
 div.calendar tr.days td:hover,
@@ -63,13 +66,6 @@ div.calendar td.button:active
   background-color: #cde;
 }
 
-div.calendar tr.days td.selected
-{
-  font-weight: bold;
-  background-color: #fff;
-  color: #000;
-}
-
 div.calendar tr.days td.today
 {
   font-weight: bold;
@@ -79,4 +75,27 @@ div.calendar tr.days td.today
 div.calendar tr.days td.otherDay
 {
   color: #bbb;
+}
+
+div.calendar tr.days td.reserved {
+    background-color: #F99;
+}
+
+div.calendar tr.days td.reserved.otherDay {
+    background-color: #FCC;
+}
+
+div.calendar tr.days td.pending-reservation {
+    background-color: #BFB;
+}
+div.calendar tr.days td.pending-reservation.otherDay {
+    background-color: #CFC;
+}
+div.calendar tr.days td.pending-reservation:hover,
+div.calendar tr.days td.pending-reservation.otherDay:hover {
+    background-color: #34ABFA;
+}
+
+.invisible {
+    display: none;
 }

@@ -91,6 +91,11 @@ Calendar.handleMouseUpEvent = function(event)
   // Clicked on a day
   if (typeof el.navAction == 'undefined')
   {
+    // Don't do anything else if the day is reserved.
+    if (Element.hasClassName(el, 'reserved')) {
+        return false;
+    }
+
     if (calendar.currentDateElement) {
       Element.removeClassName(calendar.currentDateElement, 'selected')
       Element.addClassName(el, 'selected')
@@ -102,6 +107,8 @@ Calendar.handleMouseUpEvent = function(event)
     calendar.shouldClose = !el.hasClassName('otherDay')
     var isOtherMonth     = !calendar.shouldClose
     if (isOtherMonth) calendar.update(calendar.date)
+
+    if (isNewDate) event && calendar.callSelectHandler()
   }
 
   // Clicked on an action button
@@ -170,7 +177,6 @@ Calendar.handleMouseUpEvent = function(event)
     }
   }
 
-  if (isNewDate) event && calendar.callSelectHandler()
   if (calendar.shouldClose) event && calendar.callCloseHandler()
 
   Event.stopObserving(document, 'mouseup', Calendar.handleMouseUpEvent)
@@ -222,7 +228,7 @@ Calendar.setup = function(params)
   // In-Page Calendar
   if (params.parentElement)
   {
-    var calendar = new Calendar(params.parentElement)
+    var calendar = new Calendar(params.parentElement, params.reservations, params.pendingReservations)
     calendar.setSelectHandler(params.selectHandler || Calendar.defaultSelectHandler)
     if (params.dateFormat)
       calendar.setDateFormat(params.dateFormat)
@@ -290,14 +296,19 @@ Calendar.prototype = {
   isPopup: true,
 
   dateField: null,
-
+  
+  reservations: null,
+  pendingReservations: null,
 
   //----------------------------------------------------------------------------
   // Initialize
   //----------------------------------------------------------------------------
 
-  initialize: function(parent)
+  initialize: function(parent, reservations, pendingReservations)
   {
+    this.reservations = reservations
+    this.pendingReservations = pendingReservations
+
     if (parent)
       this.create($(parent))
     else
@@ -346,6 +357,16 @@ Calendar.prototype = {
             cell.className = ''
             cell.date = new Date(date)
             cell.update(day)
+
+            // Check if this day is reserved
+            if (calendar.reservations.indexOf(dateToString(cell.date)) != -1) {
+                cell.addClassName('reserved');
+            }
+
+            // Check if this day is pending a reservation
+            if (calendar.pendingReservations.indexOf(dateToString(cell.date)) != -1) {
+                cell.addClassName('pending-reservation');
+            }
 
             // Account for days of the month other than the current month
             if (!isCurrentMonth)

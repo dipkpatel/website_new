@@ -14,6 +14,7 @@ urlpatterns = [
     url(r'^yorkland/$', views.yorkland, name='yorkland'),
 
     url(r'^reserve/?$', views.reserve, name='reserve'),
+    url(r'^reserve/existing', views.reserve_existing, name='reserve_existing'),
 
     url(r'^register/?$', views.account_register, name='account_register'),
     url(r'^sign-in/?$', views.account_sign_in, name='account_sign_in'),

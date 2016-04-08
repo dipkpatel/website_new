@@ -1,11 +1,13 @@
-from django.contrib.auth import authenticate
-from django.contrib.auth import logout
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.shortcuts import redirect
 from django.shortcuts import render
 
 from .forms import AuthenticationForm
 from .forms import RegistrationForm
+
+from .models import Reservation
+from .models import ReservationDate
 
 # Create your views here.
 def index(request):
@@ -37,9 +39,53 @@ def yorkland(request):
 
 def reserve(request):
     """
-    View for observing bookings, and creating a reservation.
+    View for creating a reservation.
     """
-    return render(request, 'lab/reserve.html')
+    confirm = False
+
+    # Get existing reservations.
+    try:
+        existing_reservations = ReservationDate.objects.all()
+        print 'Got existing'
+    except:
+        print 'none existing'
+        existing_reservations = []
+
+    # Reservation has been submitted.
+    if (request.method == 'POST') and (request.user.is_authenticated()):
+
+        # Create new reservation.
+        reservation = Reservation.objects.create(user=request.user)
+        reservation.save();
+
+        # Add dates to the reservation.
+        for date in request.POST.getlist('date'):
+            reservationDate = ReservationDate.objects.create(reservation=reservation, date=date)
+            reservationDate.save()
+
+        confirm = True
+
+    return render(request, 'lab/reserve.html', {'reservations': existing_reservations, 'authenticated': request.user.is_authenticated(), 'confirm': confirm})
+
+def reserve_existing(request):
+    """
+    View for seeing existing reservations.
+    """
+    try:
+        reservations = Reservation.objects.filter(user=request.user)
+    except:
+        reservations = []
+
+    print len(reservations)
+
+    total = []
+    for reservation in reservations:
+        reservationDates = ReservationDate.objects.filter(reservation=reservation)
+        total.append(reservationDates)
+
+    print len(total)
+
+    return render(request, 'lab/reserve_existing.html', {'reservations': total})
 
 def account_register(request):
     """
@@ -101,6 +147,7 @@ def account_sign_in(request):
 
             # Authenticated successfully. Go home.
             if user is not None:
+                login(request, user)
                 return redirect('index');
 
             # Authentication failed.
