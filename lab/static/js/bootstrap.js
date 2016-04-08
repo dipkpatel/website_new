@@ -16,6 +16,11 @@ if (typeof jQuery === 'undefined') {
   }
 }(jQuery);
 
+$('#sidebar').affix({
+      offset: {
+        top: 245
+      }
+});
 /* ========================================================================
  * Bootstrap: transition.js v3.3.6
  * http://getbootstrap.com/javascript/#transitions
