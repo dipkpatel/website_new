@@ -13,4 +13,11 @@ urlpatterns = [
     url(r'^makeit/$', views.makeit, name='makeit'),
     url(r'^friends/$', views.friends, name='friends'),
 
+    url(r'^reserve/?$', views.reserve, name='reserve'),
+    url(r'^reserve/existing', views.reserve_existing, name='reserve_existing'),
+
+    url(r'^register/?$', views.account_register, name='account_register'),
+    url(r'^sign-in/?$', views.account_sign_in, name='account_sign_in'),
+    url(r'^sign-out/?$', views.account_sign_out, name='account_sign_out')
+
 ]

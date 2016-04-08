@@ -1,0 +1,19 @@
+{% extends "lab/header.html" %}
+
+{% block content %}
+
+{% for reservation in reservations %}
+
+    <div style="border-radius: 10px; width: 100px; margin: 16px auto 0 auto; padding: 16px; box-shadow: 0 0 1px 0 black">
+
+    {% for date in reservation %}
+
+        {{ date.date }}<br />
+
+    {% endfor %}
+
+    </div>
+
+{% endfor %}
+
+{% endblock %}

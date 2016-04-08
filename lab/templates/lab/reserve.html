@@ -1,0 +1,134 @@
+{% extends "lab/header.html" %}
+
+{% block content %}
+
+<script>
+
+    // Whether the user is authenticated.
+    var authenticated = {% if authenticated %} true {% else %} false {% endif %};
+
+    // Reservations by date.
+    var reservations = [
+        {% for reservation in reservations %}"{{ reservation.date }}",{% endfor %}
+    ];
+    var pendingReservations = [];
+
+    // Date to string.
+    function dateToString(date) {
+        return date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate();
+    }
+
+    // Submits the new reservation.
+    function submitReservation() {
+        var form = document.getElementById('reserve-form');
+
+        for (var i = 0; i < pendingReservations.length; i++) {
+            var input = document.createElement('input');
+            input.type = "hidden";
+            input.name = "date";
+            input.value = pendingReservations[i];
+
+            form.appendChild(input);
+        }
+
+        form.submit();
+    }
+
+    // Handles a date selection on the calendar.
+    function handleDateSelected(e) {
+        if (!authenticated) {
+            return;
+        }
+
+        var element = e.currentDateElement;
+
+        // Check if the date is toggled for a pending reservation.
+        var date = dateToString(e.date);
+        var index = pendingReservations.indexOf(date);
+
+        // Toggled for pending reservation. Un-toggle.
+        if (index != -1) {
+            pendingReservations.splice(index, 1);
+            element.removeClassName('pending-reservation');
+        }
+
+        // Not toggled for pending reservation. Toggle.
+        else {
+            pendingReservations.push(date);
+            element.addClassName('pending-reservation');
+        }
+
+        // Hide the reservations button if no reservation is pending.
+        var button = document.getElementById('reserve-button');
+        if (!pendingReservations.length) {
+            button.addClassName('invisible');
+        }
+
+        // Show the reservations button if a reservation is pending.
+        else {
+            button.removeClassName('invisible');
+        }
+
+        // Always hide the old confirmation message.
+        var message = document.getElementById('reserve-confirm');
+        if (message) {
+            message.addClassName('invisible');
+        }
+    }
+
+    // Configures the calendar.
+    function setupCalendar() {
+        Calendar.setup(
+            {
+                dateField: 'embeddedDateField',
+                parentElement: 'calendar_container',
+                selectHandler: handleDateSelected,
+                reservations: reservations,
+                pendingReservations: pendingReservations
+            }
+        );
+    }
+
+    Event.observe(window, 'load', function() { setupCalendar() });
+</script>
+
+<div style="width: 1078px; margin: 0 auto;" class="clearfix">
+    <div id="calendar_container">
+    </div>
+
+    {% if authenticated %}
+
+    <form id="reserve-form" method="POST">
+
+        {% csrf_token %}
+
+        <a href="/reserve/existing" class="btn btn-primary" style="float: right; margin-top: 16px; margin-left: 16px;">
+            View existing reservations
+        </a>
+
+        <div id="reserve-button"
+            class="btn btn-primary invisible"
+            onclick="submitReservation()"
+            style="float: right; margin-top: 16px;">
+                Confirm new reservation
+        </div>
+
+        {% if confirm %}
+            <div id="reserve-confirm" style="float: right; margin-top: 23px;">
+                Your new reservation has been confirmed. 
+            </div>
+        {% endif %}
+
+
+    </form>
+
+    {% else %}
+
+        <a href="/sign-in" class="btn btn-primary" style="float: right; margin-top: 16px">
+            Sign in to make reservations
+        </a>
+
+    {% endif %}
+</div>
+
+{% endblock %}

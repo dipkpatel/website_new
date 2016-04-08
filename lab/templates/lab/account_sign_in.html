@@ -1,0 +1,43 @@
+{% extends "lab/header.html" %}
+
+{% block content %}
+
+<!-- Similar setup as the registration form. See account_register.html for comments -->
+<form method="POST">
+    {% csrf_token %}
+
+    <table style="margin: 0 auto; width: 250px;">
+
+        <!-- Show a message if authentication failed -->
+        {% if failed %}
+
+            <tr>
+                <td style="padding: 6px" colspan="3" style="color: #900">
+                    Incorrect username or password.
+                </td>
+            </tr>
+
+        {% endif %}
+
+        <tr>
+            <td style="padding: 6px">E-Mail</td>
+            <td style="padding: 6px">{{ form.email }}</td>
+            <td style="padding: 6px">{{ form.email.errors }}</td>
+        </tr>
+
+        <tr>
+            <td style="padding: 6px">Password</td>
+            <td style="padding: 6px">{{ form.password }}</td>
+            <td style="padding: 6px">{{ form.password.errors }}</td>
+        </tr>
+
+        <tr>
+            <td style="padding: 6px" colspan="3" class="clearfix">
+                <input class="btn btn-primary" style="float: right" type="submit" value="Sign In" />
+            </td>
+        </tr>
+    </table>
+
+</form>
+
+{% endblock %}
