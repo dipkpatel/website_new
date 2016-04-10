@@ -14,7 +14,7 @@ body {
   margin: auto;
 }
 /*locked nav bar*/
- ul.nav-pills {
+ul.nav-pills {
       top: 200px;
       left: 50px;
       position: fixed;
@@ -30,7 +30,7 @@ body {
     #sec0, #sec1, #sec2, #sec3, #sec4  {
         margin-left: 10px;
     }
-  }
+}
 /**/
 
 
@@ -41,7 +41,7 @@ body {
     text-align:center;
     border:1px solid red;
 }
-.button-home {
+a.button-home {
     position:absolute;
     bottom: 518px;
     right: 1180px;
@@ -1296,6 +1296,8 @@ img {
 .carousel-inner > .item > a > img {
   display: block;
   max-width: 100%;
+  width: 80%;
+  margin: auto;
   height: auto;
 }
 .img-rounded {
