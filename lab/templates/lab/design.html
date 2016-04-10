@@ -1,349 +1,192 @@
-{% extends "lab/header.html" %}
-
-{% block content %}
-
-<div class="container-fluid">
+{% extends "lab/header.html" %} {% block content %}
+<div class="container">
 	<div class="row">
 		<nav class="col-sm-2" id="myScrollspy">
-			<div class="center-block"> 
+			<div class="center-block">
 				<ul class="nav nav-pills nav-stacked">
-					<li><a href="#sec0">
-						<h2>
-							Section 0
-						</h2>
-					</a></li>
+					<li>
+						<a href="#sec0">
+							<h2>
+								Introduction
+							</h2>
+						</a>
+					</li>
+					<li>
+						<a href="#sec1">
+							<h2>
+								Key Features
+							</h2>
+						</a>
+					</li>
+					<li>
+						<a href="#sec2">
+							<h2>
+								Photo Gallery
+							</h2>
+						</a>
+					</li>
+					<li>
+						<a href="#sec3">
+							<h2>
+								Virtual Tour
+							</h2></a>
+						</li>
 
-					<li><a href="#sec1">
-
-						<h2>
-							Section 1
-						</h2>
-					</a></li>
-
-					<li><a href="#sec2">
-						<h2>
-							Section 2
-						</h2>
-					</a></li>
-					
-					<li><a href="#sec3">				
+					</ul>
+				</div>
+			</nav>
+			<div class="col-sm-10">
+				<div id="sec0">
+					<h1>Introduction</h1>
+					<br>
 					<h2>
-						Section 3
-					</h2></a></li>
+						<p>The design of the Yorklands Eco Learning Lab was created in order to echo the Yorklands Green Hub, colour scheme, both indoors and out. In creating this space, we are using materials that will help us demonstrate different features of the lab, so that it is easier for guests to experience the lab as many ways as possible. We have used innovative materials, features and design elements that will make it accessible to guests, while also making it easy to transport from one site to another.  Check out our photo gallery to get a glimpse of our vision for the Yorklands Eco Learning Lab.                       
+						</p>
+					</h2>
+				</div>
+				<br>
+				<br>
+				<br>
+				<br>
+				<div id="sec1">
+					<h1>Key Features</h1>
+					<p>
+						<h2>
+							Core Features
+						</h2>
+						<ul style="list-style-type:circle">
+						<h3>
+							<li>Greywater system to capture used water </li>
+							<li>Green Wall</li>
+							<li>Roof with rain water harvesting system</li>
+							<li>UV water treatment system (make water portable)</li>
+							<li>
+								Photovoltaic solar roof panel
+							</li>
+							<li>
+								"Smart" LED lighting
+							</li>
+							<li>
+								Lowatt solid waste management toilet
+							</li>
+							<li>
+								Anaerobic digester to generate power from solid waste
+							</li>
+						</h3>
+							
+						</ul>
 
-					<li><a href="#sec4">				
+						<br>
+						<h2>Materials Used</h2>
+						<br>
+						<ul style="list-style-type:circle">
+						<h3>
+							<li>Clear PVC pipes</li>
+							<li>Post-consumer cabinets</li>
+							<li>Reclaimed hardwood</li>
+							<li>Sheep wool insulation</li>
+							<li>
+								Natural clay plaster
+							</li>
+						</h3>
+							
+
+						</ul>
+					</p>
+				</div>
+				<br>
+				<br>
+				<div id="sec2">
+					<h1>Photo Gallery</h1>
+					<h3>
+						First image
+					</h3>
+					<section>
+						<div class="container gal-container">
+						<div class="col-lg-12 col-sm-12 co-xs-12 gal-item">
+								<div class="box">
+									<a href="#" data-toggle="modal" data-target="#1">
+										<img src="/static/images/design1.jpg">
+									</a>
+									<div class="modal fade" id="1" tabindex="-1" role="dialog">
+										<div class="modal-dialog" role="document">
+											<div class="modal-content">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+												<div class="modal-body">
+													<img src="/static/images/design1.jpg">
+												</div>
+												<div class="col-md-12 description">
+													<h4>This is the blueprint of wall</h4>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<br>
+							<h3>
+								Second image
+							</h3>
+							<div class="col-lg-12 col-sm-12 co-xs-12 gal-item">
+								<div class="box">
+									<a href="#" data-toggle="modal" data-target="#2">
+										<img src="/static/images/design2.jpg">
+									</a>
+									<div class="modal fade" id="2" tabindex="-1" role="dialog">
+										<div class="modal-dialog" role="document">
+											<div class="modal-content">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+												<div class="modal-body">
+													<img src="/static/images/design2.jpg">
+												</div>
+												<div class="col-md-12 description">
+													<h4>This is the second one on my Gallery</h4>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<br>
+							<h3>
+								Third image
+							</h3>
+							<div class="col-lg-12 col-sm-12 co-xs-12 gal-item">
+								<div class="box">
+									<a href="#" data-toggle="modal" data-target="#3">
+										<img src="/static/images/design3.jpg">
+									</a>
+									<div class="modal fade" id="3" tabindex="-1" role="dialog">
+										<div class="modal-dialog" role="document">
+											<div class="modal-content">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+												<div class="modal-body">
+													<img src="/static/images/design3.jpg">
+												</div>
+												<div class="col-md-12 description">
+													<h4>This is the third one on my Gallery</h4>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+
+				<div id="sec3">
+					<h1>Virtual Tour</h1>
+
 					<h2>
-						Section 4
-					</h2></a></li>
-				</ul>
+						Virtual Tour goes here.
+					</h2>
+					</p>
+				</div>
 			</div>
-			
-		</nav>
-		<div class="col-sm-10">
-			<div id="sec0"> 
-				<h3>Section 0</h3>
-				<p>Try to scroll this page and look at the navigation list while scrolling!
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.                            
-				</p>
-			</div> 
-
-			<div id="sec1"> 
-				<h1>Section 1</h1>
-				<p>Try to scroll this page and look at the navigation list while scrolling!
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.                            
-				</p>
-			</div> 
-			<div id="sec2"> 
-				<h1>Section 2</h1>
-				<p>Try to scroll this page and look at the navigation list while scrolling!
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.                            
-				</p>
-			</div> 
-			<div id="sec3"> 
-				<h1>Section 3</h1>
-				<p>Try to scroll this page and look at the navigation list while scrolling!
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.                            
-				</p>
-			</div> 
-			<div id="sec4"> 
-				<h1>Section 4</h1>
-				<p>Try to scroll this page and look at the navigation list while scrolling!
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-					At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-					find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-					Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-					eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-					sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.                            
-				</p>
-			</div> 
 		</div>
 	</div>
-</div>
-
-
-{% endblock %}
+	<br>
+	<br>
+	<br>
+	{% endblock %}

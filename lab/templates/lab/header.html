@@ -1,78 +1,54 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Yorkland Eco Learning Lab</title>
-	<link rel="shortcut icon" type="image/x-icon" href="/static/images/york_icon.ico" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	
+    <title>Yorkland Eco Learning Lab</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/static/images/york_icon.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    {% load staticfiles %}
+    <script src="{% static 'js/prototype.js' %}"></script>
+    <script src="{% static 'js/calendar.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js'%}"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-		{% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css'%}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/calendar.css' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-		<script src="{% static 'js/prototype.js' %}"></script>
-		<script src="{% static 'js/calendar.js' %}"></script>
-		<script src="{% static 'js/bootstrap.js'%}"></script>
-		<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css'%}" />
-		<link rel="stylesheet" type="text/css" href="{% static 'css/calendar.css' %}" />
+<body class="body">
+    </head>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	</head>
+    <body class="body" style="background-color: #F3F3EB" data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+        <div class="center-block">
+            <img src="/static/images/banner.png" class="img-responsive" alt="Responsive image">
+        </div>
+        <div>
+            {% block content %} {% endblock %}
+        </div>
+        <div class="container-fluid">
+            <nav class="navbar navbar-inverse navbar-fixed-bottom">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Yorkland Eco Learning Lab</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"> <a href="/">Home</a></li>
+                    <li><a href="/aboutus/">About Us</a></li>
+                    <li><a href="/learn/">Learn</a></li>
+                    <li><a href="/live/">Live</a></li>
+                    <li><a href="/design/">Design</a></li>
+                    <li><a href="/play/">Play</a></li>
+                    <li><a href="/reserve/">Make it Happen</a></li>
+                    <li><a href="/friends/">Friends</a></li>
+                    <li><a href="/contactus/">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <footer>
+            <p>&copy; Website Sqaud, University of Guelph</p>
+        </footer>
+    </body>
 
-	<body class="body">
-
-	</head>
-
-	<body class="body" style="background-color: #F3F3EB" data-spy="scroll" data-target="#myScrollspy" data-offset="20">
-
-		<div class="center-block">
-
-			<img src="/static/images/banner.png" class="img-responsive" alt="Responsive image">	
-
-		</div>
-
-		<div>
-			{% block content %}
-			{% endblock %}
-		</div>
-		<br>
-		<br>
-		<br>
-		<br>
-		<div class="container-fluid">
-			<nav class="navbar navbar-inverse navbar-fixed-bottom">
-
-				<div class="navbar-header">
-					<a class="navbar-brand" href="/">Yorkland Eco Learning Lab</a>
-				</div>
-				<ul class="nav navbar-nav">
-
-					<li class="active"> <a href="/">Home</a></li>
-					<li><a href="/aboutus/">About Us</a></li>
-
-					<li><a href="/learn/">Learn</a></li>
-
-					<li><a href="/live/">Live</a></li>
-
-					<li><a href="/design/">Design</a></li>
-
-					<li><a href="/play/">Play</a></li>
-
-					<li><a href="/makeit/">Make it Happen</a></li>
-
-					<li><a href="/friends/">Friends</a></li>
-
-					<li><a href="/contactus/">Contact Us</a></li>				
-				</ul>
-
-			</nav>
-		</div>	
-
-
-		<footer>
-			<p>&copy; Website Sqaud, University of Guelph</p>
-		</footer>
-
-
-	</body>
-
-	</html>
+</html>
