@@ -10,7 +10,6 @@ urlpatterns = [
     url(r'^learn/$', views.learn, name='learn'),
     url(r'^live/$', views.live, name='live'),
     url(r'^design/$', views.design, name='design'),
-    url(r'^makeit/$', views.makeit, name='makeit'),
     url(r'^friends/$', views.friends, name='friends'),
 
     url(r'^reserve/?$', views.reserve, name='reserve'),

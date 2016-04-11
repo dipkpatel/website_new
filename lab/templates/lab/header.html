@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Yorkland Eco Learning Lab</title>
     <link rel="shortcut icon" type="image/x-icon" href="/static/images/york_icon.ico" />
@@ -10,8 +9,12 @@
     <script src="{% static 'js/prototype.js' %}"></script>
     <script src="{% static 'js/calendar.js' %}"></script>
     <script src="{% static 'js/bootstrap.js'%}"></script>
+     <script>
+                             // Whether the user is authenticated.
+    var authenticated = {% if authenticated %} true {% else %} false {% endif %};
+    
+                      </script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css'%}" />
     <link rel="stylesheet" type="text/css" href="{% static 'css/calendar.css' %}" />
@@ -43,6 +46,10 @@
                     <li><a href="/reserve/">Make it Happen</a></li>
                     <li><a href="/friends/">Friends</a></li>
                     <li><a href="/contactus/">Contact Us</a></li>
+                  
+
+                    
+                    
                 </ul>
             </nav>
         </div>
@@ -50,5 +57,4 @@
             <p>&copy; Website Sqaud, University of Guelph</p>
         </footer>
     </body>
-
 </html>

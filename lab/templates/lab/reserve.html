@@ -94,6 +94,9 @@
 
 <div style="width: 1078px; margin: 0 auto;" class="clearfix">
     <div id="calendar_container">
+
+    <!--includes reservation info-->
+    {% include "lab/reserv_blurb.html" %}
     </div>
 
     {% if authenticated %}
@@ -103,34 +106,40 @@
         {% csrf_token %}
 
         <a href="/reserve/existing" class="btn btn-primary" style="float: right; margin-top: 16px; margin-left: 16px;">
-            View existing reservations
+            <h4>View existing reservations</h4>
+        </a>
+
+
+        <a href="/sign-out" class="btn btn-primary" style="float: right; margin-top: 16px; margin-left: 16px;">
+            <h4>Sign Out</h4>
         </a>
 
         <div id="reserve-button"
             class="btn btn-primary invisible"
             onclick="submitReservation()"
             style="float: right; margin-top: 16px;">
-                Confirm new reservation
+                <h4>Click here to Confirm new reservation</h4>
         </div>
 
         {% if confirm %}
             <div id="reserve-confirm" style="float: right; margin-top: 23px;">
-                Your new reservation has been confirmed. 
+                <h4>Your new reservation has been confirmed. Click View Reservation button to view more info. </h4>
             </div>
         {% endif %}
-
 
     </form>
 
     {% else %}
 
         <a href="/sign-in" class="btn btn-primary" style="float: right; margin-top: 16px">
-            Sign in to make reservations
+            <h4>Sign in to make reservations</h4>
         </a>
 
     {% endif %}
     <br>
     <br>
 </div>
+<br>
+<br>
 
 {% endblock %}

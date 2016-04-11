@@ -34,6 +34,7 @@ div.calendar th
 div.calendar td.title
 {
   font-weight: bold;
+  font-size-adjust: 15px;
 }
 
 div.calendar th
@@ -69,7 +70,8 @@ div.calendar td.button:active
 div.calendar tr.days td.today
 {
   font-weight: bold;
-  color: #D50000;
+  color: #800080;
+
 }
 
 div.calendar tr.days td.otherDay
