@@ -111,7 +111,7 @@ def account_register(request):
         if form.is_valid():
 
             # Create the user.
-            user = User.objects.create_user(form.cleaned_data['email'], None, form.cleaned_data['password'], first_name=form.cleaned_data['first_name'], last_name=form.cleaned_data['last_name'], location=form.cleaned_data['location'])
+            user = User.objects.create_user(form.cleaned_data['email'], None, form.cleaned_data['password'], first_name=form.cleaned_data['first_name'], last_name=form.cleaned_data['last_name'])
 
             # Show a screen explaining the successful registration.
             return render(request, 'lab/account_register_success.html')

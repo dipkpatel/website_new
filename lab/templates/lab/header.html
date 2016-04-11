@@ -4,17 +4,12 @@
     <title>Yorkland Eco Learning Lab</title>
     <link rel="shortcut icon" type="image/x-icon" href="/static/images/york_icon.ico" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
     {% load staticfiles %}
     <script src="{% static 'js/prototype.js' %}"></script>
     <script src="{% static 'js/calendar.js' %}"></script>
-    <script src="{% static 'js/bootstrap.js'%}"></script>
-     <script>
-                             // Whether the user is authenticated.
-    var authenticated = {% if authenticated %} true {% else %} false {% endif %};
-    
-                      </script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    
 
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css'%}" />
     <link rel="stylesheet" type="text/css" href="{% static 'css/calendar.css' %}" />
@@ -31,13 +26,19 @@
         <div>
             {% block content %} {% endblock %}
         </div>
+
+         <nav class="navbar navbar-inverse navbar-fixed-bottom">
         <div class="container-fluid">
-            <nav class="navbar navbar-inverse navbar-fixed-bottom">
+           
                 <div class="navbar-header">
                     <a class="navbar-brand" href="/">Yorkland Eco Learning Lab</a>
                 </div>
+                <div class="nav navbar-nav"> 
                 <ul class="nav navbar-nav">
-                    <li class="active"> <a href="/">Home</a></li>
+
+                    <li>
+                     <a href="/">Home</a>
+                     </li>
                     <li><a href="/aboutus/">About Us</a></li>
                     <li><a href="/learn/">Learn</a></li>
                     <li><a href="/live/">Live</a></li>
@@ -46,13 +47,13 @@
                     <li><a href="/reserve/">Make it Happen</a></li>
                     <li><a href="/friends/">Friends</a></li>
                     <li><a href="/contactus/">Contact Us</a></li>
-                  
 
-                    
-                    
                 </ul>
-            </nav>
+                </div>
+                
+            
         </div>
+        </nav>
         <footer>
             <p>&copy; Website Sqaud, University of Guelph</p>
         </footer>

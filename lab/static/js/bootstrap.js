@@ -22,6 +22,11 @@ $('#sidebar').affix({
         top: 245
       }
 });
+/*Transition active class*/
+$(".nav a").on("click", function(){
+   $(".nav").find(".active").removeClass("active");
+   $(this).parent().addClass("active");
+});
 /* ========================================================================
  * Bootstrap: transition.js v3.3.6
  * http://getbootstrap.com/javascript/#transitions
